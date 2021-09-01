@@ -4,7 +4,7 @@ const orderSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         require: true,
-        ref: User
+        ref: 'User'
     },
     orderItems: [
         {
@@ -50,7 +50,7 @@ const orderSchema = mongoose.Schema({
         default: false
     },
     paidAt: {
-        type: Data
+        type: Date
     },
     isDelivered: {
         type: Boolean,

@@ -1,4 +1,4 @@
-import mongoose, { mongo } from 'mongoose';
+import mongoose from 'mongoose';
 
 const reviewSchema = mongoose.Schema({
     name: { type: String, require: true },
@@ -13,7 +13,7 @@ const productSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         require: true,
-        ref: User
+        ref: 'User'
     },
     name: {
         type: String,
@@ -64,4 +64,4 @@ const productSchema = mongoose.Schema({
 
 const Product = mongoose.model('Product', productSchema)
 
-export default productSchema;
+export default Product;
